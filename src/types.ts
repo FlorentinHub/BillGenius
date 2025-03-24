@@ -10,6 +10,7 @@ export interface CompanyDetails {
   address: string;
   email: string;
   phone: string;
+  logo?: string;
 }
 
 export interface ClientDetails {
@@ -45,6 +46,7 @@ export interface InvoiceTemplate {
   currency?: string;
   paymentTerms?: string;
   notes?: string;
+  isPublic?: boolean;
 }
 
 export interface InvoiceDraft extends InvoiceData {
@@ -58,4 +60,21 @@ export interface TemplateFieldOption {
   field: TemplateField;
   label: string;
   description: string;
+}
+
+export interface User {
+  id: string;
+  email: string;
+  role?: 'admin' | 'user';
+}
+
+export interface PublicTemplate {
+  id: string;
+  name: string;
+  description?: string;
+  data: InvoiceTemplate;
+  isActive: boolean;
+  createdBy: string;
+  createdAt: Date;
+  companyLogo?: string;
 }
