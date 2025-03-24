@@ -96,7 +96,7 @@ export default function InvoiceForm({ data, onChange, onPrint }: Props) {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Dues Date</label>
+            <label className="block text-sm font-medium text-gray-700">Due Date</label>
             <input
               type="date"
               value={format(data.dueDate, 'yyyy-MM-dd')}
